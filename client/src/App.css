@@ -1,0 +1,310 @@
+/* GOOGLE FONTS CUSTOM */
+@import url('https://fonts.googleapis.com/css?family=Acme|Amatic+SC:400,700|Grenze:400,700,800|Notable|Pacifico|Permanent+Marker|Roboto+Mono|Underdog&display=swap');
+
+/* -------Basic styles------ */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: 'Permanent Marker', cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.default-button,
+button {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 6px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.grid {
+  display: grid;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+/* ---------Basic button animation-------- */
+
+.button-animation {
+  border: 0 solid;
+  box-shadow: inset 0 0 20px rgba(255, 242, 0, 0);
+  outline: 0px solid;
+  outline-color: rgba(255, 242, 0, 0.5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button-animation:hover {
+  border: 1px solid #fff200;
+  box-shadow: inset 0 0 20px rgba(255, 242, 0, 0.5), 0 0 20px rgba(255, 242, 0, 0.2);
+  outline-color: rgba(255, 242, 0, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #fff200;
+}
+
+/* ------------Custom styles for components------------ */
+
+.wrap-logo-screen {
+  min-height: 100vh;
+}
+
+.logo {
+  color: white;
+  font-size: 50px;
+  cursor: default;
+}
+
+.social-link-container {
+  grid-auto-flow: column;
+  grid-gap: 40px;
+}
+
+.social-link {
+  position: relative;
+  transition: 300ms all;
+}
+
+.social-link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 0%;
+  transition: 300ms all;
+}
+
+.social-link:hover {
+  filter: invert(100%);
+}
+
+.social-link > img {
+  width: 50px;
+  height: 50px;
+}
+
+/* ----- Start header-fix ----- */
+.contact-me-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+/* ------- End header-fix------- */
+
+/* ----- Style for PROJECT CONTAINER ---- */
+
+.project-item {
+  height: 300px;
+  box-shadow: 0px 0 35px 0 white;
+  grid-template-columns: 1fr 100px;
+}
+
+.about-project-container {
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+}
+
+.link-button-container {
+  height: 100%;
+}
+
+.img-project {
+  width: 300px;
+  height: 250px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 26px 3px rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ------------ LINK TO CODE ANIMATION ---------- */
+.img-project:hover.img-project > img {
+  filter: blur(4px);
+}
+
+.img-layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 250px;
+  width: 300px;
+  border-radius: 8px;
+
+  background: rgba(0, 0, 0, 0.4);
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: 700ms;
+  z-index: 2;
+}
+
+.img-layout img {
+  height: 65px;
+  margin-left: 18px;
+}
+
+.img-layout img:hover {
+  filter: invert(100%);
+  transition: 250ms all;
+}
+
+.img-project:hover .img-layout {
+  visibility: visible;
+  opacity: 1;
+}
+
+.img-layout p {
+  color: silver;
+}
+
+/* ------------ LINK TO CODE ANIMATION ---------- */
+
+.img-project > img {
+  width: 300px;
+}
+
+.link-button {
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.link-button > img {
+  height: 50px;
+  display: block;
+}
+
+.project-item:hover .link-button {
+  opacity: 1;
+  visibility: visible;
+}
+
+.link-button:hover {
+  background: rgba(252, 255, 255, 0.1);
+}
+
+.info-project-container {
+  height: 100%;
+}
+
+.title-description {
+  /* Some styles for block with title */
+}
+.title-description h3 {
+  color: white;
+  cursor: default;
+}
+.title-description p {
+  color: rgba(252, 255, 255, 0.3);
+  cursor: default;
+}
+
+.link-to-code img {
+  height: 50px;
+}
+/* --- INSET SHADOW WITH 3D EFFECT ---  */
+
+.inset-shadow {
+  box-shadow: inset rgba(0, 0, 0, 0.6) 0 -3px 8px, inset rgba(252, 255, 255, 0.7) 0 3px 8px;
+}
+
+/* ------------------ CONTACT ME STYLE START -------------- */
+
+.contactme-screen {
+  position: relative;
+}
+
+.contactme-background {
+  height: 100vh;
+}
+
+.contactme-background > img {
+  width: 100%;
+  height: 100vh;
+}
+
+.form-container {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 2;
+
+  position: absolute;
+  top: calc(50% - 300px);
+  left: calc(50% - 300px);
+
+  box-shadow: 0 0 30px 0 black;
+}
+
+.form > form {
+  grid-gap: 15px;
+}
+.textarea-letter,
+.form input {
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
+  width: 250px;
+  color: white;
+}
+.textarea-letter {
+  height: 200px;
+  outline: none;
+  font-size: 14px;
+  padding: 4px;
+  resize: none;
+}
+.textarea-letter:focus,
+.form input:focus {
+  border: 1px solid white;
+}
+
+.submit-button {
+  color: rgba(252, 255, 255, 1);
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+/* ------------------ CONTACT ME STYLE END -------------- */
