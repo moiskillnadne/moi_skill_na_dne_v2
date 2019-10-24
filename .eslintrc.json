@@ -1,0 +1,26 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "classes": true,
+      "defaultParams": true
+    }
+  },
+  "plugins": ["prettier", "plugin:react/recommended", "react", "eslint-plugin-flowtype"],
+  "rules": {
+    "prettier/prettier": 2,
+    "no-unused-vars": 1,
+    "no-var": 0,
+    "react/prop-types": 1
+  }
+}
