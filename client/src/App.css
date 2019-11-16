@@ -221,7 +221,7 @@ input {
 }
 
 .link-button:hover {
-  background: rgba(252, 255, 255, 0.1);
+  background: rgba(252, 255, 255, 0.2);
 }
 
 .info-project-container {
