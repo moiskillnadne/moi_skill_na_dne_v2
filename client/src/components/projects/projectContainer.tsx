@@ -1,15 +1,12 @@
 import React from 'react';
-
-//Links from settings
-import { LinkToCode } from '../../setting';
+import { IPropsProject } from '../../interfaces/propsProject'
 
 // Some images
 import RightArrow from '../../img/my-icons-collection/arrow-to-right-white.svg';
-import TVAPPICON from '../../img/posterForTvApp.jpg';
-import Github from '../../img/my-icons-collection/github.svg'
+import Github from '../../img/my-icons-collection/github.svg';
 
 
-export default function TVApp (){
+export default function projectContainer (props: IPropsProject){
   return(
     <div>
       <div className="project-item full-width grid align-center">
@@ -22,13 +19,13 @@ export default function TVApp (){
                 <div className="img-project">
                   <span className="img-layout grid align-center justify-center">
                     <div className="wrap-link-to-code grid justify-center">
-                      <a href={LinkToCode.tvapp}>
+                      <a href={props.gitLink}>
                         <img src={Github} alt=""/>
                       </a>
                       <p>Link to code</p>
                     </div>
                   </span>
-                  <img src={TVAPPICON} alt="Icon for project"/>
+                  <img src={props.image} alt="Icon for project"/>
                 </div>
               </a>
           </div>
@@ -36,8 +33,8 @@ export default function TVApp (){
           <div className="info-project-container full-width grid">
             <div className="title-description full-width grid align-center justify-center">
                 <div>
-                  <h3>TV APP</h3>
-                  <p>App for searching movies</p>
+                  <h3>{props.title}</h3>
+                  <p>{props.description}</p>
                 </div>
             </div>
             <div className="full-width grid align-end justify-center">
@@ -47,7 +44,7 @@ export default function TVApp (){
 
         {/* Hidden part with link - button */}
         <div className="link-button-container full-width">
-            <a href="#!" className="link-button grid align-center justify-center full-width">
+            <a href={props.projectLink} className="link-button grid align-center justify-center full-width">
               <img src={RightArrow} alt="Right arrow"/>
             </a>
         </div>
