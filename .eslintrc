@@ -20,7 +20,8 @@
   "rules": {
     "prettier/prettier": 2,
     "no-unused-vars": 1,
-    "no-var": 0,
-    "react/prop-types": 1
+    "no-var": 2,
+    "react/prop-types": 1,
+    "no-console": 1
   }
 }
