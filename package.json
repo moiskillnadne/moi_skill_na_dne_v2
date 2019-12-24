@@ -6,7 +6,8 @@
   "scripts": {
     "server": "node app.js",
     "client": "cd client && npm start",
-    "dev": "concurrently \"nodemon app.js\" \" cd client && npm start\""
+    "dev": "concurrently \"nodemon app.js\" \" cd client && npm start\"",
+    "precommit": "lint-staged"
   },
   "author": "Victor Ryabkov",
   "license": "ISC",
@@ -44,11 +45,20 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^3.1.0",
+    "lint-staged": "^10.0.0-beta.14",
     "nodemon": "^1.19.3",
     "prettier": "^1.18.2",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.2.0",
     "typescript": "^3.6.3",
     "webpack-cli": "^3.3.9"
+  },
+  "lint-staged": {
+    "*.{ts,tsx, js, jsx}": [
+      "node_modules/.bin/eslint --max-warnings=0",
+      "prettier --write",
+      "git add"
+    ]
   }
 }
