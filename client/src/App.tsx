@@ -1,18 +1,15 @@
 import React from 'react';
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route } from 'react-router-dom';
 import './App.css';
-
 
 //Components
 import Home from './components/Home';
-import Contactme from './components/Contactme'
+import Contactme from './components/Contactme';
 
-
-const App: React.FC = ():JSX.Element => {
+const App: React.FC = (): JSX.Element => {
   return (
     <div className="full-width">
       <Switch>
-
         <Route path="/contactme">
           <Contactme />
         </Route>
@@ -20,10 +17,9 @@ const App: React.FC = ():JSX.Element => {
         <Route path="/">
           <Home />
         </Route>
-
       </Switch>
-    </div> 
+    </div>
   );
-}
+};
 
 export default App;
